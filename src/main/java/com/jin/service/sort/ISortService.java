@@ -1,4 +1,4 @@
-package com.jin.algorithm.service;
+package com.jin.service.sort;
 
 /**
  * <p>Title: 排序算法</p>
@@ -14,5 +14,5 @@ public interface ISortService {
     * @version 1.0 2018/6/11
     * @author jin
     */
-    public int[] bubbleSort(int[] array);
+    public Integer[] bubbleSort(Integer[] array);
 }

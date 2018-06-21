@@ -1,9 +1,11 @@
-package com.jin.algorithm.controller;
+package com.jin.api;
 
-import com.jin.common.ResponseBody;
+import com.jin.service.sort.ISortService;
+import com.jin.common.web.ResponseBody;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -20,11 +22,18 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("algor/sort")
 @Api(value = "/sort", description = "算法》排序算法")
-public class AlgSortController {
+public class AlgSortApi {
+    @Autowired
+    private ISortService sortService;
+
     @ApiOperation(value = "1.冒泡排序@jin")
     @RequestMapping(value = "/bubbleSort", method = RequestMethod.POST)
     public ResponseBody<Integer[]> bubbleSort(@ApiParam(value = "源数据表")@RequestParam Integer[] array){
-        return  new ResponseBody<Integer[]>(array);
+        ResponseBody responseBody= new ResponseBody<int[]>();
+        responseBody.setLength(array.length);
+        array=sortService.bubbleSort(array);
+        responseBody.setT(array);
+        return  responseBody.returnBody();
     }
     @ApiOperation(value = "2.选择排序@jin")
     @RequestMapping(value = "/selectSort", method = RequestMethod.POST)

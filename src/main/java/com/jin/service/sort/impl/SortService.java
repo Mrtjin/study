@@ -1,6 +1,6 @@
-package com.jin.algorithm.service.impl;
+package com.jin.service.sort.impl;
 
-import com.jin.algorithm.service.ISortService;
+import com.jin.service.sort.ISortService;
 import org.springframework.stereotype.Component;
 
 /**
@@ -21,7 +21,7 @@ public class SortService implements ISortService {
      * @author jin
      */
     @Override
-    public int[] bubbleSort(int[] array) {
+    public Integer[] bubbleSort(Integer[] array) {
         for (int i=0,l=array.length;i<l;i++){
             int b=0;
             while(b<l-i-1){

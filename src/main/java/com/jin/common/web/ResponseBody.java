@@ -1,4 +1,4 @@
-package com.jin.common;
+package com.jin.common.web;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -29,6 +29,8 @@ public class ResponseBody<T> implements Serializable {
 	Date endDate =null;
 
 	long cost=0;
+
+	long length=0;
 	/**
 	 * 
 	 * @param code 返回状态码 1 成功 -1 失败
@@ -137,6 +139,14 @@ public class ResponseBody<T> implements Serializable {
 
 	public void setCost(long cost) {
 		this.cost = cost;
+	}
+
+	public long getLength() {
+		return length;
+	}
+
+	public void setLength(long length) {
+		this.length = length;
 	}
 
 	@Override

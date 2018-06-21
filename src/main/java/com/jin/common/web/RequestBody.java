@@ -1,4 +1,4 @@
-package com.jin.common;
+package com.jin.common.web;
 
 import java.io.Serializable;
 

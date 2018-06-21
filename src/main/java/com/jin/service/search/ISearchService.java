@@ -1,4 +1,4 @@
-package com.jin.algorithm.service;
+package com.jin.service.search;
 
 /**
  * <p>Title: 查找算法</p>
@@ -15,5 +15,5 @@ public interface ISearchService {
     * @version 1.0 2018/6/11
     * @author jin
     */
-    public int binarySearch(int array[],int index);
+    public Integer binarySearch(Integer array[],int index);
 }

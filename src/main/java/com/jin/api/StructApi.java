@@ -1,4 +1,4 @@
-package com.jin.structure;
+package com.jin.api;
 
 /**
  * <p>Title: </p>
@@ -8,5 +8,5 @@ package com.jin.structure;
  * @author jin
  * @version 1.0 2018/6/11
  */
-public class StructController {
+public class StructApi {
 }
